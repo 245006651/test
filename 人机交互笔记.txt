@@ -266,4 +266,4 @@ var 作用域混乱
 	let x=12;
 	let y="lily"
 xxx. prototype .run =function
-
+有问题吗？
