@@ -1,0 +1,269 @@
+overflow:hidden  (超出隐藏)
+宽高是首先考虑的属性；
+实际操作；尽量改为5 ，10的倍数（方便计算）
+【理论：板块，图片大小为8的倍数为最佳】
+padding （内边距）;{
+	padding-left -right -top -bottom
+	padding : 50px;
+		40px 50px
+		40px 30 px 50px (上 左右 下)
+		30px 40 px 50px 60px  (顺时针)
+}
+边框（border）{
+	border- radius （圆角）	
+}
+margin (外边距){拉开标签 板块间的间距}（用法同padding
+transparent (透明)
+float（浮动）:left /right /none 
+clear （清楚浮动）:left /right /both
+float:left(向左浮动 ； 标签向左摆动)
+Flex布局。浮动的替代者。
+【清除浮动使用条件：框架高度不定】
+如果框架有height值，不需要清除浮动。
+绝对路径：那个盘符，哪个文件夹，哪个文件；
+相对路径：相对目录
+理想状态：div不超过3层嵌套
+
+tinypng.com //很好的压缩图片 
+<img	src ="" alt ='"">//单标签
+	width=""  height=""   //对于内容性的图片应该写入
+	alt 图片说明,巧妙嵌入关键词；
+>
+宽高出了10* 5*还需考虑内容的数量；
+超链接
+<a href="*****.html">点击内容</a>
+<a href="https://www.baidu.com"> //域名要写全
+<a href="*****.html"  target="_self">点击内容</a>//新窗口打开
+<a href="*****.html"  target="_blank">点击内容</a>//空白窗口打开
+【伪类】
+	:hover     hand over//鼠标移动在标签上的时候    只写鼠标移上去的效果
+	a:hover
+	.mydiv:hover
+【标签分类】
+{
+	单，双标签。
+	block 标签：块级标签。 div ,li,ol,ul  设置宽高，
+	inline 标签：行内标签。 a,img 可以和别的元素共处一行。 设置宽高不行（解决办法  display//显示方式）display：block
+	inline-block 标签：行内块  可以共处一行且能设置宽高
+
+}
+【内容水平居中：文字，图片】
+	标签添加text—align：center;
+【方法2：不给标签width】
+	padding-left：20px;
+	padding_right:20px;
+【单行文本上下居中】
+	line—height    行高值与height值一样；
+【字体设置】
+	英文（数字）：Arial Verdana
+	中文：宋体，黑体，微软雅黑。
+	font-family ：Arial Verdana ”微软雅黑“ ”宋体“；
+				“Microsoft Yahei”，Simsun
+
+【过渡动画】
+	transition过渡
+	transition ：all 0.5s;
+【span 标签】inline标签
+	让少量文字具有特殊样式；让少量文字与别人分开
+【隐藏标签】
+	display：none；
+	inline/inline-block/block  //不写none都是显示
+【改变标签位置之一】
+	margin 
+	
+css3 滤镜
+	filter
+【alt+右击】//快速选择图层
+【p标签：段落】
+	文字是否独立成行；
+position：relative【相对定位】  static【静态定位】absolute【绝对定位】 sticky【粘性定位】
+top:20px;
+left:30px;
+绝对定位：盖。盖住其他内容
+top，right， left， bottom 四个方向属性控制位置//不占位；  位置使指浏览器窗口的位置；
+相对定位：管。 管绝对定位的子，孙
+全新的颜色表示
+RGB  ALPHA  	只能支持新浏览器
+变形缩放
+transform ：scale(0,0)
+transform：rotateX（180deg）;
+	   rotateY（180deg）;
+	   rotateZ（180deg）;
+
+
+更改位置，移到范围之外，被超出隐藏
+【图标的处理方法】
+1.img//一般来说只有内容性图片采用
+2.标签背景
+<span></span>
+<i></i>标签：斜体字,italic
+	赋予了新生命:icon
+	内敛标签
+white-space：nowrap //强制内哦让那个一行
+text——overflow：ellipsis/*文本超出出现省略号
+overflow：hidden
+【在线压缩：YUI压缩差价--webstorm;r.js】
+Math.floor (25.2)向下取整 值  25
+Math.ceil(25.2)  向上取整  26
+Math.round(25.2)四舍五入取整
+【模块化：函数 类】
+function 函数名（【参数】，【】）{
+	//代码
+}
+调用时  函数名（【参数】，【参数】）
+js的参数个数，可以跟形参不一样；
+【函数自带了一个：argument参数对象】
+argument参数，他有点类似数组
+arguments [0]  第一个参数
+arguments [1]   第二个参数
+argument.length 参数的个数
+JS大多数都在做四件事：
+1.找标签
+  找自己：找事件所在的标签
+	this
+       事件函数中，有一个内置对象：event 事件
+	event.target   事件所在的标签
+  通过ID找标签：
+	document 文档，特指页面。
+		文档对象。
+	Element  标签，元素
+	document.getElementByld("mydiv")   //  页面中的为字符串  因此要用引号
+2.获取，更改标签的内容
+   双标签，<头>内容<尾>
+	xx.innerHTML
+   字符串里、有两个作用：
+     1.添加特殊含义 字母S\n
+     2.去掉特殊含义。 符号\'
+3获取，更改标签的属性
+	xx.属性
+	xx.属性=“新的属性值”；
+4更改标签的样式
+事件，在js里必须全小写。不适用骆驼命名法
+【click点击，点击鼠标】
+	标签属性=”属性值“
+【html不分大小写】
+匿名函数 直接执行代码
+function(){
+
+}
+【表单元素】
+表单：1.让用户输入数据 2.把数据传递到后台，比如Java
+表单元素：能人用户【输入】数据的标签。
+  <input     type="button"/>  普通按钮  type 类型
+		submit       提交按钮  “登陆，注册，发送”等等  把数据传输给后台 
+	  type="text/"   文本框
+	  
+	<form action=“xxx.java”>      action指定后台程序
+	</form>
+   【加法：只要有一个是字符串就会进行简单拼接】
+   【数据类型转换】Number(string)把字符串转为数值型
+	Number（”123“） 123
+	Number （”a“）nan not a number
+         parseInt（string） 把字符串转为数值型
+	parseInt（”123.12asd“）123
+	parseInt（”asd123.12“）nan
+         parseFolat(string)  
+	parseFloat("123.12asd")123.12
+	parseFloat（”asd123.12“）nan
+按钮
+<audio>插入音频
+<video>插入视频
+【正则表达式队字符串的检测：true，false】
+正则.test(字符串)
+/abc/i ignore 忽略大小写
+/abc|sdas/g   global 全局查找
+//ig 
+有没有数字?
+/0|1|2|3|4/   =/[0-9]/
+zz=/abc|bdc/   竖线：或者
+【关键词的替换（屏蔽）】
+str.replace(zz,"**");不会更改原字符串。
+var newStr =str.replace(zz,"**");
+
+【是不是】？
+/^[0-9]{8}$/
+/^[0-9]{8}/ 以8位数开头的字符
+/[0-9]{8}&/以8位数结尾的字符  
+{n}  :这里的n是一个正整数。匹配前面的N个字符
+{n,}：匹配至少N个前面的字符
+{n,m}匹配至少N个最多M个
+QQ号码？至少6位，最多11位。
+/^[1-9][0-9]{5,10}&/
+手机号码？    数字用\d   digital[ 0-9]
+/^1[0-9]{10}&/   = /^1\d10}&/
+移动手机号133  158    159 开头
+/^（133|158|159）\d{8}&/
+斜杠：
+1：添加特殊含义：字母\d
+
+2：去掉特殊含义：符号\.
+alert（）//弹出
+
+2.获取，更改内容
+3.获取，更改属性
+	xx.属性  天生的属性
+	【自定义属性】Attribute 属性
+	var ff= xx.getAttribute（“yuantu ”）；//字符串
+		.setAttribute （“yuantu”，“新的属性值”）
+4.更改样式
+     <1  简单少量的样式：
+	xxx.style.background
+	XXX.style.fontsize
+    <2 大量？
+	XX.className="新的类名"
+	添加类：
+	xx.className+="  red" red前的空格不能少
+	复原：s
+	xx.className=""；  //缺点：吧原来的类
+	
+【正则：\b单词的开始和结尾\b】
+二级菜单：滥  position：absolute （relative）
+【必须做好主菜单（1级菜单）】
+【避免大量使用id】
+1.找标签
+	var lis=xx.gerElementsByTagName("li");
+		xx下面所有的li标签
+	【lis变量，本质上是个数组】
+	var lis= xx.children;//找子标签 不限制类
+		xx	下面的子标签。各种子标签，不限制类型。
+	【lis[x]】	是一个数组；
+	this:
+	li:nth-child(1)第一个子标签
+【jQuery，vue 框架。】
+创建时间对象
+	var mydate =new date();
+	代码执行那一瞬间的时间殿
+	也可以指定时间殿
+	如果：月，日期等超出时间范围，会自动跨越，跨天， 跨年。
+【计时器】
+	setInterval
+数组的创建
+var dd=new Array();
+var dd= [];
+	dd.unshift(a,b)头部添加元素	dd.push(a,b)推进去//添加
+     	dd.shift(a,b)头部剪切元素	dd.push(a,b)弹出来删除
+	dd.splice(索引，0，a,b)添加	dd.splice(索引,个数) 删除 
+current{  //当前
+}
+【获取标签的索引】
+1.手动给标签添加一个自定义属性
+<li  index="0">  </li>
+xx.getAttribute("index")
+2.利用循环添加
+	
+object对象的作用
+1.属性，方法
+    变量，函数的私有化
+   可以用来做封装
+for(  数组  in   ){
+}
+box-size:border box;//更改pardding 占位的情况
+
+display:flex   框架上的  所有的子结构就会自然的排成一行；
+基础：变量，运算符，语句
+var 作用域混乱
+【es6】 let
+	let x=12;
+	let y="lily"
+xxx. prototype .run =function
+
