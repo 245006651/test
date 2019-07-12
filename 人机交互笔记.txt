@@ -1,4 +1,4 @@
-overflow:hidden  (超出隐藏)
+﻿overflow:hidden  (超出隐藏)
 宽高是首先考虑的属性；
 实际操作；尽量改为5 ，10的倍数（方便计算）
 【理论：板块，图片大小为8的倍数为最佳】
@@ -267,3 +267,5 @@ var 作用域混乱
 	let y="lily"
 xxx. prototype .run =function
 有问题吗？
+我觉得有
+
